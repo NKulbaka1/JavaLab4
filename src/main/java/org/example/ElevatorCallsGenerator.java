@@ -6,7 +6,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class ElevatorCallsGenerator implements Runnable{
 
-    private int numberOfFloors;
+    private final int numberOfFloors;
 
     private int numberOfPassengers;
 
@@ -20,10 +20,10 @@ public class ElevatorCallsGenerator implements Runnable{
 
         while(numberOfPassengers > 0) {
 
-            int starFloor = (int) (Math.random() * 10 + 1);
-            int finishFloor = (int) (Math.random() * 10 + 1);
+            int starFloor = (int) (Math.random() * numberOfFloors + 1);
+            int finishFloor = (int) (Math.random() * numberOfFloors + 1);
             while (finishFloor == starFloor) {
-                finishFloor = (int) (Math.random() * 10 + 1);
+                finishFloor = (int) (Math.random() * numberOfFloors + 1);
             }
 
             Passenger passenger = new Passenger(starFloor, finishFloor);
