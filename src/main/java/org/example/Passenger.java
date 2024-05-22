@@ -1,8 +1,11 @@
 package org.example;
 
 public class Passenger {
+
+    // начало пути
     private int startFloor;
 
+    // конец пути
     private int finishFloor;
 
     public Passenger(int startFloor, int finishFloor) {
@@ -10,22 +13,11 @@ public class Passenger {
         this.finishFloor = finishFloor;
     }
 
-    public Passenger() {
-    }
-
     public int getStartFloor() {
         return startFloor;
     }
 
-    public void setStartFloor(int startFloor) {
-        this.startFloor = startFloor;
-    }
-
     public int getFinishFloor() {
         return finishFloor;
-    }
-
-    public void setFinishFloor(int finishFloor) {
-        this.finishFloor = finishFloor;
     }
 }
